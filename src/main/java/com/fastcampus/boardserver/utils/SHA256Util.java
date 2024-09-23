@@ -3,7 +3,7 @@ package com.fastcampus.boardserver.utils;
 import lombok.extern.log4j.Log4j2;
 
 import java.security.MessageDigest;
-
+import java.security.NoSuchAlgorithmException;
 @Log4j2
 public class SHA256Util {
     public static final String ENCRYPTION_TYPE = "SHA-256";
@@ -20,7 +20,7 @@ public class SHA256Util {
                 sb.append(Integer.toString((byteData[i] & 0xff) + 0x100, 16).substring(1));
             }
             SHA = sb.toString();
-        } catch (Exception e) {
+        } catch (NoSuchAlgorithmException e) {
             throw new RuntimeException("암호화 에러!", e);
         }
         return SHA;

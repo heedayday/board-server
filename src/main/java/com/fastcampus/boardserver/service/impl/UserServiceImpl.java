@@ -26,22 +26,12 @@ public class UserServiceImpl implements UserService {
         return userProfileMapper.getUserProfile(userId);
     }
 
-
-    @Override
-    public boolean isDuplicatedId(String id) {
-        log.info("id: "+id);
-        log.info(userProfileMapper.idCheck(id));
-        return userProfileMapper.idCheck(id) == 1;
-    }
-
     @Override
     public void register(UserDTO userDTO) {
         boolean duplIdResult = isDuplicatedId(userDTO.getUserId());
         if (duplIdResult) {
             throw new DuplicateIdException("중복된 아이디입니다.");
         }
-
-        log.info("등록");
         userDTO.setCreateTime(new Date());
         userDTO.setPassword(SHA256Util.encryptSHA256(userDTO.getPassword()));
         int insertCount = userProfileMapper.register(userDTO);
@@ -59,7 +49,10 @@ public class UserServiceImpl implements UserService {
         return memberInfo;
     }
 
-
+    @Override
+    public boolean isDuplicatedId(String id) {
+        return userProfileMapper.idCheck(id) == 1;
+    }
 
     @Override
     public void updatePassword(String id, String beforePassword, String afterPassword) {
