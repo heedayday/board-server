@@ -9,10 +9,14 @@ public class BoardServerApplication {
 	public static void main(String[] args) {
 
 
+
+		//application run
 		SpringApplication.run(BoardServerApplication.class, args);
 
 
-		
+
+
+
 	}
 
 }
