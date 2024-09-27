@@ -11,9 +11,10 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import javax.sql.DataSource;
 
 @Configuration
-@MapperScan(basePackages = "com.daybyday.postingBoard")
+@MapperScan(basePackages = "com.daybyday.postingBoard.mapper")
 public class MySQLConfig {
 
+    //mybatis에 연동하는 부분
     @Bean
     public SqlSessionFactory sqlSessionFactory(DataSource dataSource) throws Exception {
         final SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();

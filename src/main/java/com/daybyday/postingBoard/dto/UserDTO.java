@@ -10,6 +10,8 @@ import java.util.Date;
 @Setter
 @ToString
 public class UserDTO {
+
+    //Status 상태 종류는 3가지
     public enum Status {
         DEFAULT, ADMIN, DELETED
     }

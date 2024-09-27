@@ -29,6 +29,7 @@ public class LoginCheckAspect {
 
 
         String userType = loginCheck.type().toString();
+        log.info("##############"+userType);
         switch (userType) {
             case "ADMIN": {
                 id = SessionUtil.getLoginAdminId(session);

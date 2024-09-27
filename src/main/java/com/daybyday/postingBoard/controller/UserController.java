@@ -22,14 +22,14 @@ import org.springframework.web.bind.annotation.*;
 @Log4j2
 public class UserController {
 
-    private final UserServiceImpl userService;
+    private final UserServiceImpl userService; // 의존성 주입
     private static final ResponseEntity<LoginResponse> FAIL_RESPONSE = new ResponseEntity<LoginResponse>(HttpStatus.BAD_REQUEST);
 
+    //userService 생성자 추가
     @Autowired
     public UserController(UserServiceImpl userService) {
         this.userService = userService;
     }
-
 
     @PostMapping("sign-up")
     @ResponseStatus(HttpStatus.CREATED)
