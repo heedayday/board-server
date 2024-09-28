@@ -8,6 +8,8 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CategoryDTO {
+
+    // private SortStatus sortStatus; 로 사용
     public enum SortStatus {
         CATEGORIES, NEWEST, OLDEST, HIGHPRICE, LOWPRICE, GRADE
     }

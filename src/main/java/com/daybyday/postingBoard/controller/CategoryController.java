@@ -38,7 +38,7 @@ public class CategoryController {
 
     @DeleteMapping("{categoryId}")
     @LoginCheck(type = LoginCheck.UserType.ADMIN)
-    public void updateCategories(String accountId,
+    public void deleteCategories(String accountId,
                                  @PathVariable(name = "categoryId") int categoryId) {
         categoryService.delete(categoryId);
     }
