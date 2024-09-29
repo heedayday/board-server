@@ -11,17 +11,17 @@
     </insert>
 
     <select id="selectMyProducts" resultType="com.daybyday.postingBoard.dto.PostDTO">
-        SELECT `id`,
-               `name`,
-               `isAdmin`,
-               `contents`,
-               `createTime`,
-               `views`,
-               `categoryId`,
-               `userId`,
-               `fileId`,
-               `updateTime`
-        FROM `post`
+        SELECT id,
+               name,
+               isAdmin,
+               contents,
+               createTime,
+               views,
+               categoryId,
+               userId,
+               fileId,
+               updateTime
+        FROM post
         WHERE userId = #{userId}
     </select>
 
