@@ -18,7 +18,7 @@ import java.util.List;
 public class PostServiceImpl implements PostService {
 
     @Autowired
-    private PostMapper postMapper;
+    private PostMapper postMapper; //필드주입 객체 만들기
 
     @Autowired
     private UserProfileMapper userProfileMapper;
