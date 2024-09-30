@@ -74,7 +74,9 @@ public class PostController {
     public ResponseEntity<CommonResponse<PostDeleteRequest>> deleteposts(String accountId,
                                @PathVariable(name = "postId") int postId,
                                @RequestBody PostDeleteRequest postDeleteRequest) {
+        log.info("====================");
         UserDTO memberInfo = userService.getUserInfo(accountId);
+        log.info(memberInfo.getId()+"///"+postId);
         postService.deleteProduct(memberInfo.getId(), postId);
         CommonResponse commonResponse = new CommonResponse<>(HttpStatus.OK, "SUCCESS", "deleteposts", postDeleteRequest);
         return ResponseEntity.ok(commonResponse);
