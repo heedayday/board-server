@@ -19,7 +19,7 @@ public class SessionUtil {
     public static String getLoginAdminId(HttpSession session) {
         return (String) session.getAttribute(LOGIN_ADMIN_ID);
     }
-    
+
     public static void setLoginAdminId(HttpSession session, String id) {
         session.setAttribute(LOGIN_ADMIN_ID, id);
     }
