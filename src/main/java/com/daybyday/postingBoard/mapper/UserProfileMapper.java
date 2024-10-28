@@ -7,6 +7,7 @@ import org.apache.ibatis.annotations.Param;
 
 @Mapper
 public interface UserProfileMapper {
+
     public UserDTO getUserProfile(@Param("id") String id);
 
     int insertUserProfile(@Param("id") String id, @Param("password") String password, @Param("name") String name, @Param("phone") String phone, @Param("address") String address);
@@ -28,4 +29,5 @@ public interface UserProfileMapper {
     public int updatePassword(UserDTO userDTO);
 
     public int updateAddress(UserDTO userDTO);
+    
 }
