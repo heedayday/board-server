@@ -6,6 +6,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 @Log4j2
 public class SHA256Util {
+    //단방향 암호화하는 부분
     public static final String ENCRYPTION_TYPE = "SHA-256";
     public static String encryptSHA256(String str) {
         String SHA = null;
