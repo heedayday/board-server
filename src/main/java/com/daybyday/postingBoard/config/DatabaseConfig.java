@@ -11,7 +11,7 @@ import javax.sql.DataSource;
 public class DatabaseConfig {
 
 
-    @ConfigurationProperties(prefix = "spring.datasource")  // application properties 파일 prefix
+    @ConfigurationProperties(prefix = "spring.datasource")  // application properties 파일 prefix 부분을 가져올 수 있음
     @Bean
     public DataSource dataSource(){
         return DataSourceBuilder.create().build();

@@ -13,5 +13,5 @@ public @interface LoginCheck {
         USER, ADMIN
     }
     UserType type();
-    
+
 }
