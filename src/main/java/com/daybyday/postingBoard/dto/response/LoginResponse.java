@@ -10,6 +10,7 @@ import lombok.RequiredArgsConstructor;
 @AllArgsConstructor
 @RequiredArgsConstructor
 public class LoginResponse {
+
     enum LoginStatus {
         SUCCESS, FAIL, DELETED
     }
@@ -23,4 +24,5 @@ public class LoginResponse {
     public static LoginResponse success(UserDTO userDTO) {
         return new LoginResponse(LoginStatus.SUCCESS, userDTO);
     }
+    
 }

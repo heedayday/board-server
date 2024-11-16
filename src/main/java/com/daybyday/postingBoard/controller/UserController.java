@@ -84,6 +84,7 @@ public class UserController {
     public ResponseEntity<LoginResponse> updateUserPassword(String accountId, @RequestBody UserUpdatePasswordRequest userUpdatePasswordRequest,
                                                             HttpSession session) {
         ResponseEntity<LoginResponse> responseEntity = null;
+        //https://burningfalls.github.io/java/what-is-response-entity/ ResponseEntity추가설명링크
         String Id = accountId;
         String beforePassword = userUpdatePasswordRequest.getBeforePassword();
         String afterPassword = userUpdatePasswordRequest.getAfterPassword();
