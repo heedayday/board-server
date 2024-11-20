@@ -32,8 +32,10 @@ public class CategoryController {
     public void updateCategories(String accountId,
                                  @PathVariable(name = "categoryId") int categoryId,
                                  @RequestBody CategoryRequest categoryRequest) {
+
         CategoryDTO categoryDTO = new CategoryDTO(categoryId, categoryRequest.getName(), CategoryDTO.SortStatus.NEWEST,10,1);
         categoryService.update(categoryDTO);
+        
     }
 
     @DeleteMapping("{categoryId}")
