@@ -3,8 +3,9 @@ package com.daybyday.postingBoard.service.impl;
 
 
 import com.daybyday.postingBoard.dto.CategoryDTO;
-import com.daybyday.postingBoard.service.CategoryService;
 import com.daybyday.postingBoard.mapper.CategoryMapper;
+import com.daybyday.postingBoard.service.CategoryService;
+
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

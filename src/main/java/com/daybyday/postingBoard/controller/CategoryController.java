@@ -35,7 +35,6 @@ public class CategoryController {
 
         CategoryDTO categoryDTO = new CategoryDTO(categoryId, categoryRequest.getName(), CategoryDTO.SortStatus.NEWEST,10,1);
         categoryService.update(categoryDTO);
-
     }
 
     @DeleteMapping("{categoryId}")

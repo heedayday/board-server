@@ -27,7 +27,6 @@ public class LoginCheckAspect {
         String id = null;
         int idIndex = 0;
 
-
         String userType = loginCheck.type().toString();
         log.info("##############"+userType);
         switch (userType) {
