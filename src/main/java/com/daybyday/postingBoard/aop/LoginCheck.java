@@ -11,5 +11,8 @@ public @interface LoginCheck {
     public static enum UserType {
         USER, ADMIN
     }
+
+    //해당부분이 사용되는 용도 확인하기
     UserType type();
 }
+
