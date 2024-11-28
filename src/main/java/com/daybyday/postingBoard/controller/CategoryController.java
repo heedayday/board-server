@@ -44,6 +44,9 @@ public class CategoryController {
         categoryService.delete(categoryId);
     }
 
+
+
+    
     // -------------- request 객체 --------------
 
     @Setter
