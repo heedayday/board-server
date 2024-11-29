@@ -69,6 +69,8 @@ public class PostController {
         return ResponseEntity.ok(commonResponse);
     }
 
+
+
     @DeleteMapping("{postId}")
     @LoginCheck(type = LoginCheck.UserType.USER)
     public ResponseEntity<CommonResponse<PostDeleteRequest>> deleteposts(String accountId,
@@ -82,6 +84,9 @@ public class PostController {
         return ResponseEntity.ok(commonResponse);
     }
 
+
+
+
     // -------------- response 객체 --------------
 
     @Getter
@@ -90,6 +95,8 @@ public class PostController {
         private List<PostDTO> postDTO;
     }
 
+
+    
     // -------------- request 객체 --------------
 
     @Setter
