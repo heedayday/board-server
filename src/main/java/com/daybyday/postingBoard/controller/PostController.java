@@ -96,7 +96,7 @@ public class PostController {
     }
 
 
-    
+
     // -------------- request 객체 --------------
 
     @Setter
