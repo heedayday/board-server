@@ -1,6 +1,6 @@
 package com.daybyday.postingBoard.utils;
 
-
+/*httpSession https://jakarta.ee/specifications/servlet/5.0/apidocs/jakarta/servlet/http/httpsession*/
 import jakarta.servlet.http.HttpSession;
 
 public class SessionUtil {
