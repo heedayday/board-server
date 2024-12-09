@@ -17,7 +17,7 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 
 /*@Component 스프링 Bean 등록하는 방법   참고 링크 : https://dev-wnstjd.tistory.com/440 /  https://velog.io/@dabeen-jung/cs-Spring-Bean-Spring-Bean-%EC%83%9D%EC%84%B1-%EA%B3%BC%EC%A0%95
-* @Aspect은 AOP 구현하는 어노테이션 @Around  참고링크 : https://velog.io/@ddongh1122/SpringAOP-%EC%8A%A4%ED%94%84%EB%A7%81-AOP
+* @Aspect은 AOP 구현하는 어노테이션 @Around  참고링크 : https://velog.io/@ddongh1122/SpringAOP-%EC%8A%A4%ED%94%84%EB%A7%81-AOP https://jiwondev.tistory.com/152
 *  #AOP의  관점의 경우 컨트롤러에 하나씩 다 추가하는 것이 아니라 그 이전의 관점에서 처리함 참고링크: https://life-is-potatoo.tistory.com/54
 * @Order 컴포넌트나 빈의 로드 순서를 정의 가능함     참고링크: https://unhosted.tistory.com/79
 * @Around 어드바이스의 순서를 지정할 수 있음 이때는 포인트컷을 @annotation으로 지정*/
@@ -54,12 +54,12 @@ public class LoginCheckAspect {
             throw new HttpStatusCodeException(HttpStatus.UNAUTHORIZED, "로그인한 id값을 확인해주세요.") {};
         }
 
-        Object[] modifiedArgs = proceedingJoinPoint.getArgs();
+        Object[] modifiedArgs = proceedingJoinPoint.getArgs(); //getArgs() 파라미터 목록 구현 https://ktko.tistory.com/entry/Spring-ProceedingJoinPoint%EC%9D%98-%EB%A9%94%EC%84%9C%EB%93%9C
 
         if(proceedingJoinPoint.getArgs()!=null)
             modifiedArgs[idIndex] = id;
 
-        return proceedingJoinPoint.proceed(modifiedArgs);
+        return proceedingJoinPoint.proceed(modifiedArgs); //메서드 실행 https://owin2828.github.io/devlog/2019/12/30/spring-7.html
     }
 
 }
