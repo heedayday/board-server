@@ -22,6 +22,8 @@ import org.springframework.web.bind.annotation.*;
 @Log4j2
 public class UserController {
 
+
+    /*ResponseEntity  https://devlog-wjdrbs96.tistory.com/182*/
     private final UserServiceImpl userService; // 의존성 주입
     private static final ResponseEntity<LoginResponse> FAIL_RESPONSE = new ResponseEntity<LoginResponse>(HttpStatus.BAD_REQUEST);
 

@@ -16,7 +16,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
 import java.util.List;
-
+/* API내용 확인 하는 부분: https://docs.spring.io/spring-framework/docs/current/javadoc-api/index.html
+* 매개변수 @RequestBody https://velog.io/@tco0427/RequestParam%EA%B3%BC-RequestBody*/
 @RestController
 @RequestMapping("/posts")
 @Log4j2
@@ -25,6 +26,7 @@ public class PostController {
     private final PostServiceImpl postService;
     private final UserServiceImpl userService;
 
+    //PostController 생성자
     public PostController(PostServiceImpl postService, UserServiceImpl userService) {
         this.postService = postService;
         this.userService = userService;
@@ -97,8 +99,6 @@ public class PostController {
 
 
 
-    // -------------- request 객체 --------------
-
     @Setter
     @Getter
     private static class PostRequest {
@@ -110,6 +110,8 @@ public class PostController {
         private int fileId;
         private Date updateTime;
     }
+
+    // -------------- request 객체 --------------
 
     @Setter
     @Getter

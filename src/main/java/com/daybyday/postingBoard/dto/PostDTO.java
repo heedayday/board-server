@@ -11,6 +11,8 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PostDTO {
+
+    //lombok toString https://www.daleseo.com/lombok-popular-annotations/
     private int id;
     private String name;
     private int isAdmin;
