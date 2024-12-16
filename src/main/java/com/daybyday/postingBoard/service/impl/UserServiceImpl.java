@@ -14,6 +14,7 @@ import java.util.Date;
 @Log4j2
 public class UserServiceImpl implements UserService {
 
+    //@Autowired 생성자에 쓸 수 있고 스프링4.3부터 생략 가능, Setter , 필드에 사용
     @Autowired
     private UserProfileMapper userProfileMapper;
 
@@ -30,6 +31,7 @@ public class UserServiceImpl implements UserService {
     public void register(UserDTO userDTO) {
         boolean duplIdResult = isDuplicatedId(userDTO.getUserId());
         if (duplIdResult) {
+            //throw로 따로 지정한 예외 던지기
             throw new DuplicateIdException("중복된 아이디입니다.");
         }
         userDTO.setCreateTime(new Date());

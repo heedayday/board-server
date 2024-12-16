@@ -10,6 +10,7 @@ public interface PostMapper {
 
     public int register(PostDTO postDTO);
 
+    //List로 반환하기
     public List<PostDTO> selectMyProducts(int accountId);
 
     public void updateProducts(PostDTO postDTO);
